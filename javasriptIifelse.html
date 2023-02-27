@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Javascript Conditional Structure</title>
+    <style>
+        h1{
+            color: saddlebrown;
+            text-align: center;
+        }
+        p{
+            color:dimgrey;
+        }
+    </style>
+</head>
+<body>
+    <h1>If Statement</h1>
+    <p id="a1"></p>
+    <script>
+        let hour;
+        hour=new Date().getHours();
+        if (hour < 11)
+        {
+            document.getElementById("a1").innerHTML="Good Morning";
+        }
+        else
+        {
+            document.getElementById("a1").innerHTML="Good Evening";
+        }
+    </script>
+    Enter Marks : <input type="number" id="a3" max="100">
+    <button type="button" onclick="myfunction()">Click it</button>
+    <p id="a2"></p>
+    <script>
+        let marks;
+        function myfunction(){
+            marks=document.getElementById("a3").value;
+            if(marks>=90)
+            {
+                document.getElementById("a2").innerHTML="Grade A+";
+            }
+            else if (marks>=80)
+            {
+                document.getElementById("a2").innerHTML="Grade A";
+            }
+            else if (marks>=70)
+            {
+                document.getElementById("a2").innerHTML="Grade B";
+            }
+            else if (marks>=60)
+            {
+                document.getElementById("a2").innerHTML="Grade C";
+            } 
+            else
+            {
+                document.getElementById("a2").innerHTML="Fail";
+            }
+        }
+    </script>
+    <h1>Switch Statement</h1>
+    <p id="a4" style="text-align:center;"></p>
+    <script>
+        let day;
+        day=new Date().getDay();
+        switch (day)
+        {
+            case 0:
+                day="Sunday";
+                break;
+            case 1:
+                day="Monday";
+                break;
+            case 2:
+                day="Tuesday";
+                break;
+            case 3:
+                day="Wednesday";
+                break;
+            case 4:
+                day="Thursday";
+                break;
+            case 5:
+                day="Friday";
+                break;
+            case 6:
+                day="Saturday";
+                break;     
+        }
+        document.getElementById("a4").innerHTML=day; 
+    </script>
+    Enter Units : <input type="number" id="a6">
+    <button type="button" onclick="thefunction()">Click</button>
+    <p id="a5"></p>
+    <p id="a7"></p>
+    <p id="a8"></p>
+    <script>
+        function thefunction()
+        {
+            let units;
+            let bill;
+            let tax;
+            let grand_total;
+            units=document.getElementById("a6").value;
+            if (units<=300)
+            {
+                bill=units*10;
+                document.getElementById("a5").innerHTML=bill;
+                tax=bill*3/100;
+                document.getElementById("a7").innerHTML="Tax included.... "+tax;
+                grand_total=bill+tax;
+                document.getElementById("a8").innerHTML="Your Total Bill is "+grand_total;
+            }
+            else if (units<=400)
+            {
+                bill=units*15;
+                document.getElementById("a5").innerHTML=bill;
+                tax=bill*5/100;
+                document.getElementById("a7").innerHTML="Tax included.... "+tax;
+                grand_total=bill+tax;
+                document.getElementById("a8").innerHTML="Your Total Bill is "+grand_total;
+            }
+            else {
+                bill=units*20;
+                document.getElementById("a5").innerHTML=bill;
+                tax=bill*10/100;
+                document.getElementById("a7").innerHTML="Tax included.... "+tax;
+                grand_total=bill+tax;
+                document.getElementById("a8").innerHTML="Your Total Bill is "+grand_total;
+            }
+        }
+    </script>
+</body>
+</html>

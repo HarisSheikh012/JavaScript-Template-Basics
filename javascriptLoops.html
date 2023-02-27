@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Javascript Loops</title>
+    <style>
+        h1{
+            color: firebrick;
+            text-align: center;
+        }
+        h2{
+            color: olive;
+        }
+        p{
+            color: gray;
+        }
+    </style>
+</head>
+<body>
+    <h1>Javascript Loops</h1>
+    <h2>For Loop</h2>
+    <p id="a1"></p>
+    <script>
+        let text="";
+        let i;
+        for (i=0;i<=5;i++)
+        {
+            text+="Pakistan Zindabad <br>";
+        }
+        document.getElementById("a1").innerHTML=text;
+    </script>
+     <h2>While Loop</h2>
+     <p id="a2"></p>
+     <script>
+        let text1="";
+        let j=0;
+        while(j<=5){
+            text1+="Pakistan Zindabad <br>";
+            j++;
+        }
+        document.getElementById("a2").innerHTML=text1;
+    </script>
+     <h2>Do While Loop</h2>
+     <p id="a3"></p>
+     <script>
+        let text2="";
+        let k=0;
+        do{
+            text2+="Pakistan Zindabad <br>";
+            k++;
+        }while(k<=5);
+        document.getElementById("a3").innerHTML=text2;
+    </script>
+    <h2>For in Loop</h2>
+    <p id="a4"></p>
+    <script>
+        let obj={fname:"haris ",lname:" babar ",age:30};
+        let text3="";
+        let n;
+        for(n in obj)
+        {
+            text3+=obj[n];
+        }
+        document.getElementById("a4").innerHTML=text3;
+    </script>
+    <h2>For of Loop</h2>
+    <P id="a5"></P>
+    <script>
+        let obj1=["BMW","VOLVO","SAFARI"];
+        let text4="";
+        let m;
+        for (m of obj1)
+        {
+            text4+=m+"<br>";
+        }
+        document.getElementById("a5").innerHTML=text4;
+    </script>
+</body>
+</html>

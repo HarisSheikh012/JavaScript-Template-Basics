@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Javacsript Fetch Get and Posts</title>
+</head>
+<body>
+    <script>
+        function Getdata()
+        {
+            url = "https://api.github.com/users";
+            fetch (url).then(response => response.json())
+            .then(response => console.log(response))
+        }
+        Getdata();
+    </script>
+    <script>
+        function postdata()
+        {
+            url = "https://reqres.in/api/users";
+            data='{"name":"haris","caste":"sheikh","age":"24"}'
+            parameters =
+            {
+                method : 'post',
+                headers : 
+                {
+                    'Content-Type':'application/json'
+                },
+                body : data
+            }
+        fetch (url, parameters).then(response=> response.json())
+        .then(data => console.log(data))
+        }
+        postdata();
+    </script>
+</body>
+</html>

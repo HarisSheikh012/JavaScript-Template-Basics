@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Javascript Array</title>
+    <style>
+        h1{
+            color: brown;
+            text-align: center;
+        }
+        p{
+            color: darkgreen;
+        }
+    </style>
+</head>
+<body>
+    <h1>Array</h1>
+    <p id="a1"></p>
+    <p id="a2"></p>
+    <p id="a3"></p>
+    <p id="a4"></p>
+    <p id="a5"></p>
+    <h1>Javascript Templates</h1>
+    <p id="a6" style="text-align:center"></p>
+    <button onclick="afunction()">Push</button>
+    <p id="a7"></p>
+    <button onclick="bfunction()">Pop</button>
+    <p id="a8"></p>
+    <button onclick="cfunction()">Unshift</button>
+    <p id="a9"></p>
+    <button onclick="dfunction()">Shift</button>
+    <p id="a10"></p>
+    <script>
+        let text1 =["BMW","Volvo","Safari"];
+        document.getElementById("a1").innerHTML=text1;
+        let text2="jfhgadkffhcgkjdfkscfgvh";
+        document.getElementById("a2").innerHTML=text2.length;
+        let text3="haris";
+        document.getElementById("a3").innerHTML=text3.toUpperCase();
+        let text4="HARIS";
+        document.getElementById("a4").innerHTML=text4.toLowerCase();
+        let text5= "This is my Book";
+        document.getElementById("a5").innerHTML=text5.endsWith("Book");
+        let firstname= "Haris";
+        let secondname= "Babar";
+        let name = `Welcome ${firstname} ${secondname}`;
+        document.getElementById("a6").innerHTML=name;
+        let ar1=["Orange","Lemon","Apple"];
+        document.getElementById("a7").innerHTML=ar1;
+        function afunction()
+        {
+            ar1.push("Mango");
+            document.getElementById("a7").innerHTML=ar1;
+        }
+        let ar2=["Apple","Orange","Lemom","Yougurt"];
+        document.getElementById("a8").innerHTML=ar2;
+        function bfunction(){
+            ar2.pop();
+            document.getElementById("a8").innerHTML=ar2;
+        }
+        let ar3=["Orange","Lemon","Apple"];
+        document.getElementById("a9").innerHTML=ar3;
+        function cfunction()
+        {
+            ar3.unshift("Mango");
+            document.getElementById("a9").innerHTML=ar3;
+        }
+        let ar4=["Orange","Lemon","Apple"];
+        document.getElementById("a10").innerHTML=ar4;
+        function dfunction()
+        {
+            ar4.shift();
+            document.getElementById("a10").innerHTML=ar4;
+        }
+    </script>
+    <p id="a11"></p>
+    <script>
+        let ar5=["Babar","Haris"];
+        ar5.splice(1,0,"Sheikh","Raees");
+        document.getElementById("a11").innerHTML=ar5;
+    </script>
+    <p id="a12"></p>
+    <script>
+        let ar6=["Babar","Haris"];
+        let ar7=ar6.slice(1);
+        document.getElementById("a12").innerHTML=ar7;
+    </script>
+    <p id="a13"></p>
+    <p id="a14"></p>
+    <script>
+        let ar8=["Orange","Lemon","Apple"];
+        ar8.sort();
+        document.getElementById("a13").innerHTML=ar8;
+        let ar9=["Sheikh","Haris","Babar"];
+        ar9.reverse();
+        document.getElementById("a14").innerHTML=ar9;
+    </script>
+    <p id="a15"></p>
+    <script>
+        let ar10=[2,4,6,8,10];
+        let text="";
+        ar10.forEach(myfunction);
+        document.getElementById("a15").innerHTML=text;
+        function myfunction(value,index,array)
+        {
+        text=text+"<br>"+value;
+        }
+    </script>
+    <h1>Map Function Array</h1>
+     <p id="a16"></p>
+     <script>
+         let ar11=[2,4,6,8,10];
+         let ar12=ar11.map(my1function)
+         document.getElementById("a16").innerHTML=ar12;
+         function my1function(value,index,array)
+         {
+          return value*2;
+         }
+     </script>
+     <h1>Filter Function Array</h1>
+     <p id="a17"></p>
+     <script>
+         let ar13=[13,5,27,19,31];
+         let ar14=ar13.filter(my2function)
+         document.getElementById("a17").innerHTML=ar14;
+         function my2function(value,index,array)
+         {
+          return value >20;
+         }
+     </script>
+</body>
+</html>

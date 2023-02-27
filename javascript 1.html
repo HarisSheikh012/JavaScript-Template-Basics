@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fisrt Javascrpit</title>
+    <style>
+        h1{
+            text-align: center;
+            color: grey;
+        }
+        h2{
+            text-align: center;
+            color: chocolate;
+        }
+        h3{
+            text-align: center;
+            color: yellowgreen;
+        }
+        h4{
+            text-align: center;
+            color: teal;
+        }
+        p{
+            text-align: center;
+            color:darkgreen
+        }
+        button{
+            margin: auto;
+            display: block;
+        }
+        img{
+            margin: auto;
+            display: block;
+        }
+    </style>
+    <script>
+        function myfunction()
+        {
+            document.getElementById("fun").innerHTML="Text Changed";
+        }
+    </script>
+</head>
+<body>
+    <p id="demo">Javascrpit changes the text</p>
+    <button type="button" onclick="document.getElementById('demo').innerHTML='Heloo Javascript'">Click</button>
+    <h2>Javascript can change attributes values</h2>
+    <button type="button" onclick="document.getElementById('image').src='bulboff.gif'">Turn off light</button>
+    <img src="bulboff.gif" id="image" style="width: 100px;">
+    <button type="button" onclick="document.getElementById('image').src='bulbon.gif'">Turn on light</button>
+    <h3>Javascript can change the Font size</h3>
+    <button type="button" onclick="document.getElementById('t').style.fontSize='40px'">To change the text font</button>
+    <p id="t">change the text</p>
+    <h4>Javascript can hide the text</h4>
+    <button type="button" onclick="document.getElementById('hide').style.display='none '">To hide the text click on me</button>
+    <h2 id="hide">Hide the Text</h2>
+    <p>Javascript can show hidden text</p>
+    <button type="button" onclick="document.getElementById('txet').style.display='block'">To show hidden text</button>
+    <h3 id="txet" style="display:none">the hidden text</h3>
+    <p>Script Tag</p>
+    <script>
+        document.getElementById("cs").innerHTML="Javascript";
+    </script>
+    <h4 id="cs">Javascript</h4> 
+    <p id="fun">The Functions  ouside the body tag of Javascript using button</p>
+    <button type="button" onclick="myfunction()">Click</button>
+    <p id="un">The Functions inside the body tag of Javascript using button</p>
+    <script>
+        function thefunction()
+        {
+        document.getElementById("un").innerHTML="Text Changed";
+        }
+    </script>
+    <button type="button" onclick="thefunction()">Click</button>
+    <h2>Externel Javascript</h2>
+    <P id="j">Paragraph</P>
+    <button type="button" onclick="thfunction()">Externel Js</button>
+    <script src="externel_script.js"></script>
+    <h1>Javascript Output</h1>
+    <h3>innerHTML</h3>
+    <p id="dem"></p>
+    <script>
+        document.getElementById("dem").innerHTML= 4 + 6;
+    </script>
+    <h3>document.write</h3>
+    <script>
+        document.write(7+6);
+    </script>
+    <h3>window.alert</h3>
+    <script>
+        window.alert("warning");
+    </script>
+    <h3>console.log</h3>
+    <script>
+        console.log("Hello World");
+    </script>
+    <h3>window.print</h3>
+    <button type="button" onclick="window.print()"><h4>Print This Page</h4></button>
+    <h2>Javascript statments</h2>
+    <h3 id="demo1"></h3>
+    <script>
+        let x, y, z; //variable declaration
+        x=5; // variable initialization
+        y=10;// variable initialization
+        z=x+y;
+        document.getElementById("demo1").innerHTML="The value of Z is "+ z ;
+    </script>
+    <script>
+        //Comments
+        function hefunction()
+        {
+            document.getElementById("de1").innerHTML="Dolly Bolly!";
+            document.getElementById("de2").innerHTML="How are you!";
+        }
+    </script>
+    <button type="button" onclick="hefunction()">Click To Show</button>
+    <p id="de1"></p>
+    <p id="de2"></p>
+    <h1>Javascript operator</h1>
+    <p id="d"></p>
+    <script>
+        // assignment, arithmetic operators
+        document.getElementById("d").innerHTML=(3+2)*2; 
+    </script>
+    <h2 id="p"></h2>
+    <script>
+        const pi=3.14;
+        document.getElementById("p").innerHTML=pi;
+    </script>
+    <h3>DataTypes</h3>
+    <script>
+        let length=16; // number data type
+        let lastname="John"; // string data type
+        let l={fname:"John",lname:"Doe"}; // object  
+    </script>
+    <h3>Array</h3>
+    <p id="aray"></p>
+    <script>
+        let a=["book","pen","registar"];
+        document.getElementById("aray").innerHTML=a[1];
+    </script>
+    <h3>Javascript objects</h3> 
+    <p id="ob"></p>
+    <script>
+        // Object 
+        let obj={fristbook:"Physics",price:500,}
+        document.getElementById("ob").innerHTML="My Book of "+obj.fristbook+"'s price is "+obj.price;
+    </script>
+    <h3>Javascript Functions</h3>
+    <p id="p1"></p>
+    <p id="obje"></p>
+    <p id="p2"></p>
+    <p id="object"></p>
+    <script>
+      //Multiplication Function
+      document.getElementById("p1").innerHTML="Multiplication  Function";
+      function ifunction(p1,p2)
+        {
+         return p1*p2;  
+        }
+        document.getElementById("obje").innerHTML=ifunction(4,5);
+        //Addition Function
+        document.getElementById("p2").innerHTML="Addition Function";
+        function hisfunction(r1,r2)
+        {
+            return r1+r2;
+        }
+        document.getElementById("object").innerHTML=hisfunction(10,30);
+    </script>
+</body>
+</html>

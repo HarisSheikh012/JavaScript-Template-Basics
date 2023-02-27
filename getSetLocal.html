@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Get and Set Local storage</title>
+    <style>
+        h1 {
+            color: brown;
+            text-align: center;
+        }
+
+        p {
+            color: olivedrab;
+            text-align: center;
+        }
+
+        form {
+            margin-top: 4%;
+        }
+    </style>
+</head>
+
+<body>
+    <script>
+        ///...Set Data...///
+        let userdetail = {
+            Name: "Haris",
+            Password: "Babar123",
+            Email: "haris01234567@gmail.com",
+            Contact: "03166861729"
+        }
+        window.localStorage.setItem("User_details", JSON.stringify(userdetail));
+        ///...Get Data...///
+        let getdata = window.localStorage.getItem("User_details")
+        let getdataobject=JSON.parse(getdata);
+        console.log(getdataobject);
+    </script>
+</body>
+
+</html>
